@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width">
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+
+
+  <style>
+    
+*{
+    font-family: 'Titillium Web', sans-serif;
+    color:white;
+}
+
+h1 {
+    font-size: 6vw;
+     display:inline;
+}
+
+hr{
+    color:blue;
+    width:90%;
+}
+
+
+        a:link{
+      margin-left:35%;
+      display:inline;
+      font-size:1.8vw;
+      color:white;
+      background-color:black;
+      padding: .5vh 5.5vh;
+      text-decoration:none;
+      border-radius: 0 15px 0 15px;
+      border:solid;
+      border-color:white;
+     -webkit-transition: background-color .7s, padding .7s, color .7s;
+     transition: background-color .7s, padding .7s, color .7s;
+     
+    }
+    a:hover{
+      background-color:white;
+      padding: 3vh 9vh;
+      color:black;
+    }
+    
+    a:visited{
+      color:white;
+    }
+
+        a:visited:hover{
+     color:black;
+    }
+    
+    #basiclink{
+     margin-left:0px;
+     display:inline;
+     color:white;
+     background-color:0;
+     padding:0px;
+     text-decoration:none;
+     border-radius:0px;
+     border:none;
+     text-decoration:underline;
+     color:aqua;
+}
+
+    #basiclink:hover{
+     background-color:black;
+     color:aqua;
+}
+
+    p{
+     width:95%;
+     margin:auto;"
+}
+    
+    .background-img{
+        width:100%; 
+    }
+    
+    .doglogo{
+        width:15%;
+        margin:5% 10% 5% 10%;
+        transform: rotateZ(0deg);
+        filter:grayscale(70%);
+     -webkit-transition:  filter .7s, margin .7s, width .7s;
+     transition: filter .7s, margin .7s, width .7s, transform .7s;
+
+    }
+    
+    .doglogo:hover{
+        width:20%;
+        margin:2.8% 10% 2.8% 10%;
+        filter:grayscale(0%);
+        transform: rotateZ(360deg);
+    }
+</style>
+</head>
+
+<body  style="background-color:black;">
+<h1>Anthony Cafaro</h1>
+
+<iframe style="margin-right:2%; margin-top:2%; float:right; " src="https://open.spotify.com/embed/artist/2eERUUNHkJxdPzzhteDVRr" width="300" height="70" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+<h3 style="padding-left:20vw;">Music</h3>
+
+<hr>
+
+<div style="width:95%; margin:auto;">
+<h2>Boy Blue</h2>
+
+<p> Boy Blue is a pop-rock band from northen NJ. As the lead bassist, I am at the heart and soul of every song, and take full and complete credit for every success of the band. My immense talent and charm is felt by millions and billions of fans every time they give us a listen. Why not <a href="#"  id="basiclink">visit our website?</a> Better yet, you can <a href="#"  id="basiclink">check us out on Spotify.</a> </p>
+
+<div style="margin:2%; position:relative;">
+<img class="background-img" src="https://i.imgur.com/4hKhuOx.jpg">
+<p style="position:absolute;">
+
+    <br>
+
+I currently play in two bands, "Boy Blue" and "Cafe Ritz." Here is Boy Blue's lastest video:
+
+    <br>  
+    
+    <iframe width="500" height="282" style="margin:3%; border:solid; border-color: white;" src="https://www.youtube.com/embed/teNKx46sE-s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <br>
+       Click here to visit Boy Blue's website: <br>
+
+<img class="doglogo" src="https://i.imgur.com/LDeNUgW.png" alt="boybluelogo">
+
+    </p>
+
+    
+</div>
+<hr style="color:red; width:80%;">
+
+
+</body>
+</html>
+
