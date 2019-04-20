@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<head>
+  <title> RoI Calulator </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  
+<link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet"> 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <style>
+    *{
+        font-family: 'K2D', sans-serif;
+        font-size:1.8vw;
+    }
+    
+    ul{
+    list-style: none;    
+    }
+    
+    
+button {
+    margin:2%;
+    border-radius: 5px;
+    background-color: aquamarine;
+    color: black;
+    padding: 1%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2vw;
+}
+
+form{
+    padding-top:5%;
+    padding-left:5%;
+    position:absolute;
+    width:100%;
+}
+ 
+#buttondiv{
+    position:fixed;
+    left:13%;
+    top:50%;
+    display:block;
+    padding:0px;
+    height:10vh;
+}
+ 
+#display{
+    position:fixed;
+    padding-left:50%;
+    top:9%;
+}
+
+div{
+    display:none;
+    width:100%;
+    height:100vh;
+    padding: 0px;
+    margin:0px;
+    bottom:0px;
+}
+
+input{
+    width:18%;
+    padding:1%;
+    margin:.61%;
+}
+
+body{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height:100%;
+}
+
+#tutorial{
+    display:block;
+}
+
+    </style>
+    
+</head>
+ 
+ <body id="body">
+
+<p id ="tutorial">Hey! Press "Add Item +" to add a new item to your thing.</p>
+
+<div id="item0">
+ <form id="form0">
+ <ul>
+<li> <input id="name0" placeholder="item name" type="text" name="itemname0"> </li>
+<li> <input id="quantity0" placeholder="quantity" type="text" name="itemquantity0"> </li>
+<li> <input id="cost0" placeholder="unit cost" type="number" name="itemcost0"> </li>
+<li> <input id="saleprice0" placeholder="sale price" type="number" name="itemsaleprice0"> </li>
+<li> <input id="numsold0" placeholder="amount sold" type="text" name="itemnumsold0"> </li> 
+<ul>
+</form>
+
+</div>
+
+
+<div id="item1">
+<form id="form1"> 
+<ul>
+<li><input id="name1" placeholder="item name" type="text" name="itemname0"></li>
+<li><input id="quantity1" placeholder="quantity" type="text" name="itemquantity0"></li>
+<li><input id="cost1" placeholder="unit cost" type="number" name="itemcost0"></li>
+<li><input id="saleprice1" placeholder="sale price" type="number" name="itemsaleprice0"></li>
+<li><input id="numsold1" placeholder="amount sold" type="text" name="itemnumsold0"></li>
+<ul>
+</form> 
+  </div>
+  
+  
+<div id="item2">
+<form id="form2"> 
+<ul>
+<li><input id="name2" placeholder="item name" type="text" name="itemname0"></li>
+<li><input id="quantity2" placeholder="quantity" type="text" name="itemquantity0"></li>
+<li><input id="cost2" placeholder="unit cost" type="number" name="itemcost0"></li>
+<li><input id="saleprice2" placeholder="sale price" type="number" name="itemsaleprice0"></li>
+<li><input id="numsold2" placeholder="amount sold" type="text" name="itemnumsold0"></li>
+</ul>
+</form> 
+  </div>
+  
+  
+  <div id="item3">
+<form id="form3"> 
+<ul>
+<li><input id="name3" placeholder="item name" type="text" name="itemname0"></li>
+<li><input id="quantity3" placeholder="quantity" type="text" name="itemquantity0"></li>
+<li><input id="cost3" placeholder="unit cost" type="number" name="itemcost0"></li>
+<li><input id="saleprice3" placeholder="sale price" type="number" name="itemsaleprice0"></li>
+<li><input id="numsold3" placeholder="amount sold" type="text" name="itemnumsold0"></li>
+</ul>
+</form> 
+  </div>
+  
+  <div id="item4">
+<form id="form4"> 
+<ul>
+<li><input id="name4" placeholder="item name" type="text" name="itemname0"></li>
+<li><input id="quantity4" placeholder="quantity" type="text" name="itemquantity0"></li>
+<li><input id="cost4" placeholder="unit cost" type="number" name="itemcost0"></li>
+<li><input id="saleprice4" placeholder="sale price" type="number" name="itemsaleprice0"></li>
+<li><input id="numsold4" placeholder="amount sold" type="text" name="itemnumsold0"></li>
+</ul>
+</form> 
+  </div>
+  
+    <ul id="display">
+    <li id="namedisplay"> Name </li>
+    <li id="quantitydisplay"> Quantity </li>
+    <li id="costdisplay"> Unit Cost </li>
+    <li id="pricedisplay"> Sale Price </li>
+    <li id="solddisplay"> Units Sold </li>
+    </ul>
+
+<div id="buttondiv">
+
+<p id="indexdisplay">show me the index</p>
+
+<p id="indexdisplay1">show me the index</p>
+
+<p id="indexdisplay2">show me the index</p>
+<button type="button" onclick="moveLeft()"> < </button>
+
+<button type="button" onclick="newItem();">Add Item +</button>
+<button type="button" onclick="calculateRoI(); ">My Roi</button>
+<button type="button" onclick="saveData(); ">Create</button>
+<button type="button" onclick="deleteData(); ">Clear Item</button>
+<button type="button" onclick="moveRight(); "> > </button>
+
+</div>
+ 
+
+<script>
+
+currentindex = 0;
+index = 0;
+idw = 0; // initial document width
+scrollLeft = 0;
+ 
+$(window).scroll(function()  
+{
+ scrollLeft = window.pageXOffset; 
+
+ cdw = $(document).width(); // current document width
+ totalscreens = Math.round(cdw / idw);
+ currentindex = Math.round(scrollLeft / idw);
+     document.getElementById("namedisplay").innerHTML = localStorage.getItem("nameDataKey" + currentindex);
+    document.getElementById("quantitydisplay").innerHTML = localStorage.getItem("quantityDataKey" + currentindex);    
+    document.getElementById("costdisplay").innerHTML = localStorage.getItem("costDataKey" + currentindex);    
+    document.getElementById("pricedisplay").innerHTML = localStorage.getItem("priceDataKey" + currentindex);
+        document.getElementById("solddisplay").innerHTML = localStorage.getItem("soldDataKey" + currentindex);
+});
+
+for(i = 0; i < 5; i++) //this for loop needs to check which divs have info, and save stuff to them. we also need to be able to have the items collapse if someone deletes the one between 1 and 3
+{
+  if (localStorage.getItem("nameDataKey" + i))
+   newItem();
+}
+
+function newItem()
+{
+
+ if (document.getElementById('tutorial').style.display !== 'none')
+ {
+     document.getElementById('tutorial').style.display = 'none';
+ }
+ 
+ if(idw == 0)
+ { 
+  idw = window.innerWidth;
+ } 
+ 
+
+newformnum = "item" + index; 
+ index = index + 1;
+ 
+ rval = Math.floor(Math.random() * 255) + 50;
+ gval = Math.floor(Math.random() * 255) + 50;  
+ bval = Math.floor(Math.random() * 255) + 50;
+ 
+ document.getElementById(newformnum).style.backgroundColor='rgb(' + rval +','+ gval +','+ bval + ')';
+ 
+ scrollto = idw * index;
+ $('html, body').animate({ scrollLeft: scrollto }, 400);
+ 
+      document.getElementById("namedisplay").innerHTML = localStorage.getItem("nameDataKey" + currentindex);
+    document.getElementById("quantitydisplay").innerHTML = localStorage.getItem("quantityDataKey" + currentindex);    
+    document.getElementById("costdisplay").innerHTML = localStorage.getItem("costDataKey" + currentindex);    
+    document.getElementById("pricedisplay").innerHTML = localStorage.getItem("priceDataKey" + currentindex);
+        document.getElementById("solddisplay").innerHTML = localStorage.getItem("soldDataKey" + currentindex);
+ 
+ document.getElementById(newformnum).style.display='inline-block'; 
+}
+
+ 
+
+function calculateRoI()
+{ 
+    currentname = "name" + currentindex;
+   name = document.getElementById(currentname).value;
+    
+    numsold = document.getElementById("numsold0").value;
+    quantity = document.getElementById("quantity0").value;
+    totalcost = document.getElementById("cost0").value * quantity;
+    totalreturn =  document.getElementById("saleprice0").value * numsold;
+    totalRoI = totalreturn - totalcost;
+    
+     document.getElementById('indexdisplay').innerHTML= currentindex;
+    document.getElementById("indexdisplay1").innerHTML = name;  
+}
+
+function getHorizontalScroll()
+{
+  itemoffset = Math.round(scrollLeft / idw); //left offset over screen width
+  return idw * (itemoffset + 1)
+}
+
+
+function moveRight(){
+    $('html, body').animate({scrollLeft: getHorizontalScroll() }, 'fast');
+    
+}
+
+function moveLeft(){
+    hs = getHorizontalScroll();
+    leftscroll = hs - 2 * idw;
+    $('html, body').animate({scrollLeft: leftscroll }, 'fast');
+  
+}
+ 
+function saveData(){
+    nameData = document.getElementById("name" + currentindex).value;
+    localStorage.setItem("nameDataKey" + currentindex, nameData);
+    document.getElementById("namedisplay").innerHTML = localStorage.getItem("nameDataKey" + currentindex);
+    
+    quantityData = document.getElementById("quantity" + currentindex).value;
+    localStorage.setItem("quantityDataKey" + currentindex, quantityData);
+    document.getElementById("quantitydisplay").innerHTML = localStorage.getItem("quantityDataKey" + currentindex);
+   
+    costData = document.getElementById("cost" + currentindex).value;
+    localStorage.setItem("costDataKey" + currentindex, costData);
+    document.getElementById("costdisplay").innerHTML = localStorage.getItem("costDataKey" + currentindex);
+    
+     priceData = document.getElementById("saleprice" + currentindex).value;
+    localStorage.setItem("priceDataKey" + currentindex, priceData);
+    document.getElementById("pricedisplay").innerHTML = localStorage.getItem("priceDataKey" + currentindex);
+    
+     soldData = document.getElementById("numsold" + currentindex).value;
+    localStorage.setItem("soldDataKey" + currentindex, soldData);
+    document.getElementById("solddisplay").innerHTML = localStorage.getItem("soldDataKey" + currentindex);
+    
+     if (localStorage.getItem("nameDataKey" + currentindex))
+ {
+   document.getElementById("form" + currentindex).style.display = "none";
+ }
+
+}
+
+function deleteData()
+{
+    localStorage.removeItem("nameDataKey" + currentindex);
+    localStorage.removeItem("quantityDataKey" + currentindex);
+    localStorage.removeItem("costDataKey" + currentindex);
+    localStorage.removeItem("priceDataKey" + currentindex);
+    localStorage.removeItem("soldDataKey" + currentindex);
+    
+         document.getElementById("namedisplay").innerHTML = localStorage.getItem("nameDataKey" + currentindex);
+    document.getElementById("quantitydisplay").innerHTML = localStorage.getItem("quantityDataKey" + currentindex);    
+    document.getElementById("costdisplay").innerHTML = localStorage.getItem("costDataKey" + currentindex);    
+    document.getElementById("pricedisplay").innerHTML = localStorage.getItem("priceDataKey" + currentindex);
+        document.getElementById("solddisplay").innerHTML = localStorage.getItem("soldDataKey" + currentindex);
+        
+ if (localStorage.getItem("nameDataKey" + currentindex) != true)
+ {
+   document.getElementById("form" + currentindex).style.display = "initial";
+ }
+}
+
+ </script>
+ 
+ 
+ 
+</body>
+</html>
