@@ -1,167 +1,215 @@
 <!DOCTYPE html>
-
-
-<html>
-<head>
-
-<meta name="viewport" content="width=device-width">
-<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
-
-
-  <style>
  
-*{
-    font-family: 'Titillium Web', sans-serif;
-}
-    .modal {
-      display: none; /* Hidden by default */
-      position: fixed; /* Stay in place */
-      z-index: 1; /* Sit on top */
-      padding-top: 100px; 
-      left: 0;
-      top: 0;
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
-    }
- 
-    .modal-content {
-      background-color: black;
-      margin: auto;
-      padding: 20px;
-      border-radius: 0 15px 0 15px;
-      border:solid;
-      border-color:white;
-      width: 80%;
-    }
-    
-    p{
-       position:absolute; 
-       left:10%; 
-       top:2.5%; 
-       text-align:center; 
-       width:80%; 
-       border-radius:2px; 
-       background-color:rgb(0,0,0,.7); 
-       color:white;
-       margin:auto;
-       font-size: 1.5vw;
-    }
-    
-    div{
-        position:relative;
-    }
-    
-    li{
-      list-style-type:none;
-      margin:0;
-      padding:0;
-      
-    }
-    
-    body{
-      margin:0;
-    }
-    
-    
-    .mylinks{
-      width:70%;
-      margin:auto;
-      padding:4vh;
-      text-align:center;
-    }
-    
-   .invalid-link{
-      width:70%;
-      margin:auto;
-      padding:4.6vh;
-      text-align:center;
-      color:gray;
-    }
-    
-        a:link{
-      font-size:2.8vh;
-      color:white;
-      background-color:black;
-      padding: .5vh 5.5vh;
-      text-decoration:none;
-      border-radius: 0 15px 0 15px;
-      border:solid;
-      border-color:white;
-     -webkit-transition: background-color .5s, padding .5s, color .5s;
-     transition: background-color .5s, padding .5s, color .5s;
-     
-    }
-    a:hover{
-      background-color:white;
-      padding: 3vh 9vh;
-      color:black;
-    }
-    
-    a:visited{
-color:white;
-    }
-    
-    a:visited:hover{
-color:black;
-    }
-    
-  </style>
-  </head>
-
-<body onload="myAlert()" style="background-color:black; overflow:hidden;">
+<html lang="en">
   
-  <!-- Header, Title and Title Links (Music-About-Social) -->
+<head>  
+     
+  <title>Natasha Chinn</title>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
 
-<div class="mylinks" id="whoIsAnt" style="padding-top:5vh;"> <a href="#" onclick="return false;">  Who is Anthony Cafaro? </a></div>
-<div class="mylinks"> <a href="https://www.instagram.com/Cafarooo">  Instagram </a></div>
-<div class="mylinks"> <a href="https://www.linkedin.com/in/cafarooo/">  LinkedIn    </a></div> 
-    <div class="mylinks">   <a href="music.html">Music</a></div>
-    <div class="mylinks">   <a href="programming.html">Programming</a></div> 
-    
-    <div class="mylinks">  <a href="https://github.com/cafarooo">GitHub</a> </div>
-    
-   
-    
-    <div class="mylinks invalid-link"> Photography </div>
-        <div class="mylinks invalid-link">  Videography </div>
-
-
-
-        <div id="myModal" class="modal">
-  <div>
-    <p class="modal-content">Me! I'm Anthony Cafaro, and I am a recent graduate from William Paterson University with a BS in Computer Science. I enjoy photography and videography, as well as playing and writing music. I have experience working with C++, Java, Python, Javascript, HTML, and CSS. I have experience editing digital media including photo, audio, and videos.</p>
-  </div>
-</div>
-
-
-<script>
-
-
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("whoIsAnt");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+    <style>
+ 
+body {
+    background-color: tomato;
+}
+        
+        
+* {
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255, 1);
+    overflow-x: hidden;
+    transition: 0.5s;
+    -moz-transition:0.5s;
+     -o-transition: 0.5s;
+    -webkit-transition:0.5s;
+}
+
+.overlay a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: rgb(0,0,0);
+}
+
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
 }
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+       }
+    
+.socialbutton{
+      top:90%; 
+      width:5%; 
+      opacity:.75;
+  -webkit-transition:right .6s, top .6s, opacity .6s, width .6s ease-out;
+  -moz-transition:right .6s, top .6s,  opacity .6s, width .6s ease-out;
+  -o-transition:right .6s, top .6s,  opacity .6s, width .6s ease-out;
+  transition:right .6s, top .6s,  opacity .6s, width .6s ease-out;
+  
+             }
+        
+        
+.fromleft {
+    -webkit-animation-name: fromleft; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+    animation-name: fromleft;
+    animation-duration: 3s;
+               }
 
-</script>
-  </body>
+@-webkit-keyframes fromleft {
+    0%   {-webkit-transform: translateX(600%);}
+    100%  {-webkit-transform: translateX(0%);}
+}
+
+/* Standard syntax */
+@keyframes fromleft {
+  0%   {transform: translateX(600%);}
+  100%  {transform: translateX(0%);}
+}
+             
+.fromright {
+    -webkit-animation-name: fromright; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: fromright;
+    animation-duration: 2s;
+               }
+
+@-webkit-keyframes fromright {
+    0%   {-webkit-transform: translateX(-300%);}
+    100%  {-webkit-transform: translateX(0%);}
+}
+
+/* Standard syntax */
+@keyframes fromright {
+  0%   {transform: translateX(-300%);}
+  100%  {transform: translateX(0%);}
+}
+
+.redcircle {
+    -webkit-animation-name: redcircle; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: redcircle;
+    animation-duration: 4s;
+               }
+
+@-webkit-keyframes redcircle {
+    0%   {-webkit-transform:scale(0);}
+    100%  {-webkit-transform:scale(1);}
+}
+
+/* Standard syntax */
+@keyframes redcirlce {
+  0%   {transform:scale(0);}
+  100%  {transform:scale(1);}
+}
+
+
+
+.blackbox{
+    margin:auto;
+    width:30%;
+    border:black solid 4px;
+    overflow:hidden;
+    position:relative;
+}
+
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 15%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    margin-right:85%;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+ </style>
+    
+</head> 
+
+ <body>
+ <!--Splash Screen-->
+ 
+<div id="myNav" class="overlay">
+
+<div style="display:block; position:relative; border-style:solid; border-width:4px; width:375px; height:229px; margin-left:auto; margin-right:auto; margin-top:15%; overflow:hidden;">
+
+
+         <img src="red%20circle.png" onclick="closeNav()" alt="circle" class="redcircle" style="position:absolute; width:48%; top:2%; left:1%;">
+     <img src="Natasha%20Chinn.png" onclick="closeNav()" alt="Natasha Chinn" class="fromleft" style="position:absolute; width:75%; top:19%; left:21%;">
+       <img src="Osbetrics%20and%20Gynecology.png" onclick="closeNav()" alt="Obstetrics and Gynecology" class="fromright" style="position:absolute; width:71%;top:71%; left:21%;">
+     
+     </div>
+     
+  <a style="text-align:center;" href="javascript:void(0)" onclick="closeNav()">> enter site <</a>
+</div>
+    <script>
+        
+    function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+} 
+
+var coll = document.getElementsByClassName("collapsible");
+
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+    </script>
+   
+</body>
 </html>
