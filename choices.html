@@ -98,9 +98,11 @@ input[type=submit] {
 
 <body  style="background-color:black;">
 <h1>The Big Question: What music video should we do next?</h1>
-<form action="/send_email.php">
+<form method="post" action="/send_email.php">
   <label for="fname">First name:</label><br>
   <input type="text" id="fname" name="fname" value="Bitch"><br>
+    <label for="email">Email:</label><br>
+  <input type="text" id="email" name="email" value="ur email"><br>
   <input type="radio" id="smoke" name="songtitle" value="smoke">
   <label for="smoke">Secondhand Smoke</label><br>
   <input type="radio" id="panic" name="songtitle" value="panic">
@@ -109,7 +111,7 @@ input[type=submit] {
   <label for="die">Die Hard 6 (Help Now)</label><br>
   <input type="radio" id="other" name="songtitle" value="other">
   <label for="other">Other</label><br>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Send Form">
 </form>
              </body>
 </html>
