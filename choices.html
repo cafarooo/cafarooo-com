@@ -1,1 +1,119 @@
+<!DOCTYPE html>
 
+
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width">
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+
+
+  <style>
+    
+*{
+    font-family: 'Titillium Web', sans-serif;
+    color:white;
+}
+
+h1 {
+    font-size: 6vw;
+     display:inline;
+}
+
+hr{
+    color:blue;
+    width:90%;
+}
+
+
+        a:link{
+      margin-left:35%;
+      display:inline;
+      font-size:1.8vw;
+      color:white;
+      background-color:black;
+      padding: .5vh 5.5vh;
+      text-decoration:none;
+      border-radius: 0 15px 0 15px;
+      border:solid;
+      border-color:white;
+     -webkit-transition: background-color .7s, padding .7s, color .7s;
+     transition: background-color .7s, padding .7s, color .7s;
+     
+    }
+    a:hover{
+      background-color:white;
+      padding: 3vh 9vh;
+      color:black;
+    }
+    
+    a:visited{
+      color:white;
+    }
+
+        a:visited:hover{
+     color:black;
+    }
+    
+    #basiclink{
+     margin-left:0px;
+     display:inline;
+     color:white;
+     background-color:0;
+     padding:0px;
+     text-decoration:none;
+     border-radius:0px;
+     border:none;
+     text-decoration:underline;
+     color:aqua;
+}
+
+    #basiclink:hover{
+     background-color:black;
+     color:aqua;
+}
+
+    p{
+     width:95%;
+     margin:auto;"
+}
+    
+    .background-img{
+        width:100%; 
+    }
+    
+    .doglogo{
+        width:15%;
+        margin:5% 10% 5% 10%;
+        transform: rotateZ(0deg);
+        filter:grayscale(70%);
+     -webkit-transition:  filter .7s, margin .7s, width .7s;
+     transition: filter .7s, margin .7s, width .7s, transform .7s;
+
+    }
+    
+    .doglogo:hover{
+        width:20%;
+        margin:2.8% 10% 2.8% 10%;
+        filter:grayscale(0%);
+        transform: rotateZ(360deg);
+    }
+</style>
+</head>
+
+<body  style="background-color:black;">
+<h1>The Big Question: What music video should we do next?</h1>
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <input type="radio" id="smoke" name="songtitle" value="smoke">
+  <label for="smoke">Secondhand Smoke</label><br>
+  <input type="radio" id="panic" name="songtitle" value="panic">
+  <label for="panic">Panic? Panic!</label><br>
+  <input type="radio" id="die" name="songtitle" value="die">
+  <label for="die">Die Hard 6 (Help Now)</label><br>
+  <input type="radio" id="other" name="songtitle" value="other">
+  <label for="other">Other</label>
+</form>
+             </body>
+</html>
