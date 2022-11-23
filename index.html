@@ -68,6 +68,24 @@
       margin:0;
     }
     
+  .hero-image {
+  background-image:url("https://raw.githubusercontent.com/cafarooo/cafarooo-com/master/website%20bg.JPG");
+  background-color:black;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  }
+
+ .hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  }
     
     .mylinks{
       width:70%;
@@ -115,6 +133,13 @@ color:black;
   </head>
 
 <body onload="myAlert()" style="background-color:black; overflow:hidden;">
+  
+  <div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:2.8vh">I am Jane Doe</h1>
+    <h3>Anthony R. Cafaro</h3>
+  </div>
+</div>
  
   <div class="w3-top">
   <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
@@ -128,8 +153,6 @@ color:black;
   </div>
 </div>
   <!-- Header, Title and Title Links (Music-About-Social) -->
-
-<img class="bg-image" src="https://raw.githubusercontent.com/cafarooo/cafarooo-com/master/website%20bg.JPG" alt="Fireworks Background" width="1600" height="800">
 
 <div class="mylinks" id="whoIsAnt" style="padding-top:5vh;"> <a href="#" onclick="return false;">  Who is Anthony Cafaro? </a></div>
 <div class="mylinks"> <a href="https://www.instagram.com/Cafarooo">  Instagram </a></div>
